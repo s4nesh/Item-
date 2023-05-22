@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var itemBoxFour: UITextField!
     @IBOutlet weak var itemBoxFive: UITextField!
     
-    var buttonTapCount = 0
+    
+    var buttonTapCount = 0 //Keeps track of the button tapped so I can reference index in itemList
     var itemList: [String] = [" ", " ", " ", " "," "]
     
     override func viewDidLoad() {
@@ -24,10 +25,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    // adds the text input from textBox into an array. It actually just replaces the empty text element in the array.
     func addToItemArray() {
-        itemList[buttonTapCount] = textBox.text ?? " "
+        itemList[buttonTapCount] = textBox.text ?? ""
     }
     
+    // Refreshing the list so it updates what is in the array to match the list
     func refreshList() {
         itemOneBox.text = itemList[0]
         itemBoxTwo.text = itemList[1]
