@@ -5,6 +5,8 @@
 //  Created by Sanesh Gobin on 2023/05/18.
 //
 
+// Improvement: User UItextview instead of UItextfield for the list. UItextView supports multiline, where as UITextField supports only one.
+
 import UIKit
 
 class ViewController: UIViewController {
